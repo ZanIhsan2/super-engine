@@ -1,7 +1,7 @@
 // Proses import dependensi yang dibutuhkan
 import express from 'express';
 import cors from 'cors';
-import { GoogleGenAI } from '@google/genai';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 import 'dotenv/config';
 
@@ -10,7 +10,7 @@ import 'dotenv/config';
 // 1. inisialisasi express
 
 const app = express();
-const ai  = new GoogleGenAI({});
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // 2. inisialisasi middleware yang dibutuhkan
 
